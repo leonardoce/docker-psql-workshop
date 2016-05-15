@@ -32,7 +32,7 @@ Let's suppose you have started a PostgreSQL master server using the
 want to start a standby container, you can simply use this command:
 
     $ docker run -d \
-        --name pg-standby \
-		--link pg-master:master \
+        --name workshop-standby \
+		--link workshop-master:master \
 	    -e "MASTER_CONNSTRING=host=master user=postgres" \
 		leonardoce/workshop-pg-standby
